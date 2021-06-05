@@ -18,7 +18,7 @@ class CreateStudentsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->integer('invoice_day')->unsigned();
-            $table->tinyInteger('is_active')->unsigned()->default(0);
+            $table->unsignedTinyInteger('is_active')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

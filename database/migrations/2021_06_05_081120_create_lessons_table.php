@@ -17,7 +17,7 @@ class CreateLessonsTable extends Migration
             $table->id();
             $table->string('name');
             $table->integer('lesson_fee');
-            $table->tinyInteger('is_enabled')->unsigned()->default(0);
+            $table->unsignedTinyInteger('is_enabled')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
