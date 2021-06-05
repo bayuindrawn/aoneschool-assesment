@@ -11,6 +11,17 @@ class InvoiceDetail extends Model
 
     protected $table = 'invoice_details';
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'invoice_id',
+        'lesson_id',
+        'lesson_fee'
+    ];
+
     public function invoice()
     {
         return $this->belongsTo('App\Models\Invoice');
