@@ -21,6 +21,7 @@ class CreateInvoicesTable extends Migration
             $table->timestamps();
 
             $table->index('student_id');
+            $table->softDeletes();
         });
     }
 

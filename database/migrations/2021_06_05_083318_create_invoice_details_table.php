@@ -22,6 +22,7 @@ class CreateInvoiceDetailsTable extends Migration
 
             $table->index('invoice_id');
             $table->index('lesson_id');
+            $table->softDeletes();
         });
     }
 
