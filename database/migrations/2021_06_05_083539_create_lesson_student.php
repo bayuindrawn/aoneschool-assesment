@@ -15,8 +15,8 @@ class CreateLessonStudent extends Migration
     {
         Schema::create('lesson_student', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('student_id');
-            $table->foreignId('lesson_id');
+            $table->foreignId('student_id')->references('id')->on('students')->onDelete('cascade');
+            $table->foreignId('lesson_id')->references('id')->on('lessons')->onDelete('cascade');
             $table->timestamps();
 
             $table->index('student_id');

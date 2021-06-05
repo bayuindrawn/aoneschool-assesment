@@ -16,7 +16,7 @@ class CreateStudentsTable extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('email');
+            $table->string('email');
             $table->integer('invoice_day')->unsigned();
             $table->tinyInteger('is_active')->unsigned()->default(0);
             $table->timestamps();
