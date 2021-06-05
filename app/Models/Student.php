@@ -14,6 +14,6 @@ class Student extends Model
 
     public function lesson()
     {
-    	return $this->belongsToMany('App\Models\Lesson');
+    	return $this->belongsToMany('App\Models\Lesson')->where('is_enabled', 1);
     }
 }
