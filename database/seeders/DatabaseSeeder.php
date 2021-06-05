@@ -17,8 +17,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        Lesson::factory(50)->create();
-        Student::factory(500)->create();
+        Lesson::factory(10000)->create();
+        Student::factory(10000)->create();
 
         $this->createLeassonsStudent();
     }
@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
         $maxLessons = Lesson::max('id');
         $maxStudent = Student::max('id');
 
-        for ($i=0; $i < 1000; $i++) { 
+        for ($i=0; $i < 100000; $i++) { 
             DB::table('lesson_student')->insert([
                 'student_id' => random_int(1,$maxStudent),
                 'lesson_id' => random_int(1,$maxLessons)
