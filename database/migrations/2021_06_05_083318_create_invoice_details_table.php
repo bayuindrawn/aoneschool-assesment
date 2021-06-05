@@ -17,7 +17,7 @@ class CreateInvoiceDetailsTable extends Migration
             $table->id();
             $table->foreignId('invoice_id');
             $table->foreignId('lesson_id');
-            $table->decimal('lesson_fee', 20, 2);
+            $table->integer('lesson_fee');
             $table->timestamps();
 
             $table->index('invoice_id');

@@ -16,7 +16,7 @@ class CreateInvoicesTable extends Migration
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
             $table->foreignId('student_id');
-            $table->decimal('total_amount', 20, 2);
+            $table->integer('total_amount');
             $table->dateTime('invoice_date');
             $table->timestamps();
 

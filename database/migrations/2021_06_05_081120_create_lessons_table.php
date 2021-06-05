@@ -16,7 +16,7 @@ class CreateLessonsTable extends Migration
         Schema::create('lessons', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->decimal('lesson_fee', 20, 2);
+            $table->integer('lesson_fee');
             $table->tinyInteger('is_enabled')->unsigned()->default(0);
             $table->timestamps();
             $table->softDeletes();
